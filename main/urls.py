@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('supersecret/', admin.site.urls),
 ]
 
 if settings.DEBUG:
@@ -21,3 +21,6 @@ if not settings.DEBUG:
     urlpatterns += [
         re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
     ]
+admin.site.site_header ="Alibaba Admin"
+admin.site.site_title = "Alibaba Admin Portal"
+admin.site.index_title = "Welcome to the Alibaba Protal"
